@@ -44,7 +44,19 @@ const dna2 = 'gctttgaagttcggaataggcgcactgttagcagaggctatccacaagcttccaacccgg' +
 'ttggccttatagaatatcagctttcggcgtcagaaccgtgtacgctgaaccatcccatac' +
 'aggcagttcccttttatactaggtaggatggccctatgttcgcagatttcgaacatgact'
 
+/**
+ * @return {number}
+ */
 function DNAdiff() {
+    var i = 0;
+    var count = 0;
+    while(i <= dna1.length){
+        if(dna1[i] !== dna2[i]){
+           count++;
+        }
+        i++;
+    }
+    return count;
 }
 
 /* Testing Part */
