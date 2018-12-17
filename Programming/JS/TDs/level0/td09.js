@@ -14,7 +14,9 @@ Pour rappel, une année est bissextile si elle est :
 */
 
 /* TD Part */
-
+function leap(years) {
+    return (years % 4 === 0 && years % 100 !== 0) || years % 400 === 0;
+}
 
 
 /* Testing Part */
@@ -26,6 +28,6 @@ try {
     } else {
         console.log('TD09:: KO')
     }
-} catch(e) {
+} catch (e) {
     console.log('TD09:: KO');
 }

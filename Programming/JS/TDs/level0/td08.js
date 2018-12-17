@@ -11,7 +11,14 @@ la fonction retournera false.
 /* TD Part */
 
 function td08(array, item) {
-
+    var i = 0;
+    while (i <= array.length) {
+        if(array[i] === item){
+            var verif = 1;
+        }
+        i++;
+    }
+    return verif === 1;
 }
 
 /* Testing Part */

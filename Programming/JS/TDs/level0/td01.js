@@ -11,6 +11,7 @@ N'hésitez pas à lire les tests effectués !
 /* TD Part */
 
 function td01() {
+    return "Ça fonctionne";
 }
 
 /* Testing Part */

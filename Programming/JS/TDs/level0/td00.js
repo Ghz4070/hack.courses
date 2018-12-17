@@ -17,7 +17,7 @@ la variable test contienne la chaîne de caractères :
 
 /* TD Part */
 
-const test = '';
+const test = 'Hello World';
 
 /* Testing Part */
 

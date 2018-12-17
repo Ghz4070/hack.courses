@@ -9,6 +9,7 @@ du nombre a passé en paramètre !
 /* TD Part */
 
 function square(a) {
+    return a * a;
 }
 
 /* Testing Part */

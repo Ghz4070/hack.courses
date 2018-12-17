@@ -9,6 +9,9 @@ retourne le produit de ceux-ci.
 /* TD Part */
 
 // À vous de rajouter votre fonction ici !
+function mul(a, b) {
+    return a * b;
+}
 
 /* Testing Part */
 

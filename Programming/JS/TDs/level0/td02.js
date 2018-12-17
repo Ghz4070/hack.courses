@@ -9,6 +9,7 @@ la somme de ceux-ci.
 /* TD Part */
 
 function add(a, b) {
+    return a + b;
 }
 
 /* Testing Part */

@@ -11,6 +11,7 @@ Par exemple avec hello("Anon") => "Hello Anon, how are you?".
 /* TD Part */
 
 function hello(nom) {
+    return "Hello "+ nom +", how are you?";
 }
 
 /* Testing Part */

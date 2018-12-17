@@ -2,7 +2,7 @@
 
 Maintenant, passons à l'utilisation de boucles !
 Le but de ce TD est de terminer d'implémenter la
-fonction loop999, qui retourne une chaîne de 
+fonction loop100, qui retourne une chaîne de 
 caractères contenant à la suite, sans espace les
 nombres de 0 à 999.
 
@@ -14,8 +14,15 @@ jusqu'à 999 inclus
 /* TD Part */
 
 function loop999() {
-
+    var i = 0;
+    var nombre = "";
+    while (i <= 999) {
+        nombre += i;
+        i += 1;
+    }
+    return nombre;
 }
+// console.log(loop999());
 
 /* Testing Part */
 const array = '0'.repeat(1000).split('').map((i, id) => id).join('');
