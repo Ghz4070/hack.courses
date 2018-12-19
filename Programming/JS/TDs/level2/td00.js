@@ -13,13 +13,15 @@ Le code doit être réalisé uniquement en ES5 pour cette partie du cours (pas d
 
 /* TD Part */
 function easySort(array) {
-    while(i <= array.length){
-        for (let elem = 0; elem <= array.length; elem++) {
-            if (array[elem] <= array[elem] + 1){
-                console.log(array[elem]);
-            }
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > array[i + 1]) {
+            let fort = array[i]
+            array[i] = array[i + 1]
+            array[i + 1] = fort
+            i = 0
         }
     }
+
 }
 
 /* Testing Part */
