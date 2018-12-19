@@ -1,23 +1,21 @@
 /* TD03 
 
-Le but de cet exercice est de créer une fonction qui, 
-après trois secondes retournera le nombre 42 dans la callback 
-passée en paramètre.
+Le but de cet exercice est de créer fonction retournant une Promise 
+qui après trois secondes retournera le nombre 42 dans son 'then'.
 
 */
 
 /* TD Part */
 
-function waitThreeSecondsAndReturn42(callback) {
+function waitThreeSecondsAndSend42InTheThen() {
 }
 
 /* Testing part */
-
 var startTime = Number(new Date())
 
 function callback(returnedValue) {
     var timeShift = parseInt((Number(new Date()) - startTime) / 1000)
-    
+
     if (timeShift === 3 &&
         returnedValue === 42) {
         console.log('TD03 :: Passed')
@@ -26,4 +24,6 @@ function callback(returnedValue) {
     }
 }
 
-waitThreeSecondsAndReturn42(callback)
+waitThreeSecondsAndSend42InTheThen()
+    .then(callback)
+    .catch(error => console.error(error))

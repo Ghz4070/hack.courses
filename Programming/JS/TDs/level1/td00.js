@@ -44,21 +44,17 @@ const dna2 = 'gctttgaagttcggaataggcgcactgttagcagaggctatccacaagcttccaacccgg' +
 'ttggccttatagaatatcagctttcggcgtcagaaccgtgtacgctgaaccatcccatac' +
 'aggcagttcccttttatactaggtaggatggccctatgttcgcagatttcgaacatgact'
 
-/**
- * @return {number}
- */
 function DNAdiff() {
-    var i = 0;
-    var count = 0;
-    while(i <= dna1.length){
-        if(dna1[i] !== dna2[i]){
-           count++;
+    var length = dna2.length;
+    var nbDiff = 0;
+    for (var i = 0; i < length; i++) {
+        if (!(dna2[i] === dna1[i])) {
+            nbDiff++;
         }
-        i++;
     }
-    return count;
+
+    return nbDiff;
 }
 
 /* Testing Part */
-
 DNAdiff() == 716 ? console.log('TD00: OK') : console.log('TD00: KO')
