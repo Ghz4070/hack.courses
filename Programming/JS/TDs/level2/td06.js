@@ -17,6 +17,7 @@ Source : https://fr.wikipedia.org/wiki/Factorielle
 /* TD Part */
 
 function factorielle() {
+
 }
 
 /* Testing Part */

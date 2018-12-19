@@ -15,6 +15,20 @@ a => 4
 
 /* TD Part */
 function leet(input) {
+    var messageLeet = "";
+    for (var i = 0; i < input.length; i++) {
+        if (input[i].toLowerCase() === "t") { messageLeet += "7"; }
+        else if (input[i].toLowerCase() === "i") { messageLeet += "1"; }
+        else if (input[i].toLowerCase() === "s") { messageLeet += "5"; }
+        else if (input[i].toLowerCase() === "e") { messageLeet += "3"; }
+        else if (input[i].toLowerCase() === "g") { messageLeet += "6"; }
+        else if (input[i].toLowerCase() === "o") { messageLeet += "0"; }
+        else if (input[i].toLowerCase() === "b") { messageLeet += "8"; }
+        else if (input[i].toLowerCase() === "a") { messageLeet += "4"; }
+        else { messageLeet += input[i].toLowerCase(); }
+    }
+    console.log(messageLeet)
+    return messageLeet.trim()
 }
 
 /* Testing Part */
