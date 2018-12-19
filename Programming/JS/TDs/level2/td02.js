@@ -28,7 +28,25 @@ queue.execute() // ['foo']
 */
 /* TD Part */
 function ExecutionQueue() {
+    var tab = [];
+    var tab2 = [];
 
+    function push(fun) {
+        tab.push(fun);
+    }
+    
+    function execute() {
+        for (var i = 0; i < tab.length; i++){
+            tab2[i] = (tab[i]());
+        }
+        tab.splice(0, tab2.length);
+        return tab2;
+    }
+
+    function size() {
+        return tab.length;
+    }
+    return { push ,execute,size};
 }
 
 /* Testing Part */

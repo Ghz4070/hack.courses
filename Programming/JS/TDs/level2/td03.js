@@ -9,10 +9,7 @@ passée en paramètre.
 /* TD Part */
 
 function waitThreeSecondsAndReturn42(callback) {
-    setTimeout(function () {
-       return callback(42);
-    }, 3000);
-
+    setTimeout(() => callback(42), 3000)
 }
 
 /* Testing part */
@@ -21,7 +18,7 @@ var startTime = Number(new Date())
 
 function callback(returnedValue) {
     var timeShift = parseInt((Number(new Date()) - startTime) / 1000)
-
+    
     if (timeShift === 3 &&
         returnedValue === 42) {
         console.log('TD03 :: Passed')

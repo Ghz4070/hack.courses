@@ -12,16 +12,18 @@ Le code doit être réalisé uniquement en ES5 pour cette partie du cours (pas d
 */
 
 /* TD Part */
-function easySort(array) {
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] > array[i + 1]) {
+function easySort(array) { // By Alexandre Giannetto =)
+    for(let i = 0; i < array.length; i++){
+        if(array[i] > array[i+1]){
             let fort = array[i]
-            array[i] = array[i + 1]
+            array[i] = array[i +1]
             array[i + 1] = fort
             i = 0
         }
     }
+    
 
+    return array
 }
 
 /* Testing Part */

@@ -28,6 +28,24 @@ robbie.do(1, 'Jérémie') // Retourne 'Bonjour Jérémie!'
 */
 
 function Robbie () {
+    return {
+        do: (instruction, ...extra) => {
+            switch (instruction) {
+                case 1:
+                        return `Bonjour ${extra[0]}!`
+                case 2:
+                    return new Date().getUTCDate()
+                case 3:
+                    return extra[0].replace(/t/g, '7')
+                case 4:
+                    return extra[0].replace(/\w/g, '#')
+                case 5:
+                    return extra[0].replace(extra[1], extra[2])
+                case 6:
+                    return extra[0].replace(/date/g, new Date().getUTCDate())
+            }
+        }
+    }
 }
 
 /* TD Part */
