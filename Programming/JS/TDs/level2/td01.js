@@ -13,8 +13,21 @@ Exemple :
 
 /* TD Part */
 function parseCSV(string) {
-
+    const output = [];
+    const lines = string.split('\n');
+    lines.shift();
+    for (const line of lines) {
+        const rows = line.split(';');
+        const book = {
+            title: rows[0],
+            author: rows[1],
+            date: parseInt(rows[2])
+        }
+        output.push(book)
+    }
+    return output
 }
+
 
 /* Testing Part */
 var csv = "Title;Author;Date\n" +
