@@ -8,6 +8,12 @@ qui après trois secondes retournera le nombre 42 dans son 'then'.
 /* TD Part */
 
 function waitThreeSecondsAndSend42InTheThen() {
+    const promise = new Promise(function(resolve){
+        setTimeout(function(){
+            resolve(42)
+        }, 3000)
+    })
+    return promise
 }
 
 /* Testing part */

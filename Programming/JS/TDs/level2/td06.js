@@ -14,10 +14,15 @@ Par exemple :
 Source : https://fr.wikipedia.org/wiki/Factorielle
 
 */
+
 /* TD Part */
 
 function factorielle(n) {
-    if (n ===0){return 1} else { return n * factorielle(n-1)}
+    if (n === 0) {
+        return 1
+    } else {
+        return n * factorielle(n - 1)
+    }
 }
 
 /* Testing Part */

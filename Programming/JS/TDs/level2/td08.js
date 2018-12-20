@@ -27,12 +27,12 @@ robbie.do(1, 'Jérémie') // Retourne 'Bonjour Jérémie!'
 
 */
 
-function Robbie () {
+function Robbie() {
     return {
         do: (instruction, ...extra) => {
             switch (instruction) {
                 case 1:
-                        return `Bonjour ${extra[0]}!`
+                    return `Bonjour ${extra[0]}!`
                 case 2:
                     return new Date().getUTCDate()
                 case 3:

@@ -23,6 +23,7 @@ s.size // 1
 */
 
 let Storage = () => {
+    return new Map();
 }
 
 /* Testing Part */

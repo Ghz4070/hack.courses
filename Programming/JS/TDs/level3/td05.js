@@ -17,6 +17,16 @@ p1.sub(p2) // Retourne un nouveau point ayant pour coordonées x = 3 - 4 et y = 
 /* TD Part */
 
 class Point2 {
+    constructor(x, y) {
+        this.x = x
+        this.y = y
+    }
+    add(point) {
+        return new Point2(point.x + this.x, point.y + this.y)
+    }
+    sub(point) {
+        return new Point2(point.x - this.y, point.y - this.y)
+    }
 }
 
 /* Testing Part */

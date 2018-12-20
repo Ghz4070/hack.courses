@@ -35,7 +35,7 @@ const rawData = require('./bdd.js')
 
 class User {
     constructor(id, firstName, lastName, email, gender, ip) {
-        this.id = id
+        this.id = Number(id)
         this.firstName = firstName
         this.lastName = lastName
         this.email = email
@@ -47,6 +47,40 @@ class User {
 class UsersBDD {
     constructor(rawData) {
         this.raw = rawData
+    }
+    parseCSV(rawStr) {
+        const lines = rawStr.split('\n')
+        const output = []
+        output.shift()             
+        lines.forEach(line => {
+            output.push(new User(...line.split(',')))
+        })
+        return output
+    }
+    init() {
+        return new Promise((resolve, reject) => {
+            const csv = this.parseCSV(this.raw);
+            this.bdd = csv
+            csv ? resolve(csv) : reject('Could not parse CSV')
+        })
+    }
+    get(i) {
+        return this.bdd.find(u => u.id == i)
+    }
+    get length() {
+        return this.bdd.length
+    }
+    put (user) {
+        this.bdd.push(user)
+    }
+    getByEmail(email) {
+        return this.bdd.find(u => u.email == email)
+    }
+    getByIP(ip) {
+        return this.bdd.find(u => u.ip == ip)
+    }
+    getByFirstName(name) {
+        return this.bdd.filter(u => u.firstName == name)
     }
 }
 
@@ -65,6 +99,7 @@ usersBDD
                 return TD + 'Failed 1'
             }
             if (usersBDD.get(100).id !== 100) {
+                console.log(usersBDD.get(100))
                 return TD + 'Failed 2'
             } else if (usersBDD.getByEmail('ldykesrn@businessinsider.com').id !== 996) {
                 return TD + 'Failed 3'

@@ -14,6 +14,12 @@ Enfin, il doit comporter un attribut length, retournant le nombre d'éléments c
 */
 
 let Storage = () => {
+    const map = new Map()
+    return {
+        put: (key, value) => map.set(key, value),
+        fetch: (key) => map.get(key),
+        get length() { return map.size }
+    }
 }
 
 /* Testing Part */
